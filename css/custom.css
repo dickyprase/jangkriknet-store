@@ -1,0 +1,253 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --primary-color: #4F46E5;
+    --primary-hover: #4338ca;
+    --secondary-color: #10B981;
+    --accent-color: #F59E0B;
+    --text-main: #1F2937;
+    --text-muted: #6B7280;
+    --bg-light: #F3F4F6;
+    --bg-white: #FFFFFF;
+    --border-color: #E5E7EB;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-main) !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: #1F2937;
+    /* Dark Gray */
+    color: var(--bg-light);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+footer a {
+    color: #9CA3AF;
+}
+
+footer a:hover {
+    color: var(--bg-white);
+}
+
+/* Utilities */
+.text-primary-custom {
+    color: var(--primary-color);
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-color);
+}
+
+.shadow-custom {
+    box-shadow: var(--shadow-md);
+}
+
+.rounded-custom {
+    border-radius: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 8rem 0;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.9), rgba(16, 185, 129, 0.8));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Category Card */
+.category-card {
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Product Badge */
+.position-absolute {
+    z-index: 10;
+}
+
+.product-img-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-wrapper img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .product-img-wrapper img {
+    transform: scale(1.05);
+}
